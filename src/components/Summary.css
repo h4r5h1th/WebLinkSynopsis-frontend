@@ -2,21 +2,24 @@
     background-color: rgba(255, 255, 255, 0.706);
     backdrop-filter: blur(20px);
     margin-top: 40px;
-    margin-left: 40px;
-    margin-right: 40px;
-    padding: 30px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px;
     border-radius: 40px;
     min-height: 300px;
     display: flex;
     align-items: top;
     justify-content: center;
+    max-width: 600px;
+    min-width: 300px;
 }
 
 .Summary_mainBox > div> p{
     margin-top: 10px;
+    text-align: justify;
 }
 .Summary_mainBox > div> h3{
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 30px;
 }
 .Start_page{
@@ -39,4 +42,21 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+}
+
+@media only screen and (max-width: 600px){
+    .Summary_mainBox{
+        min-width: 300px;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    .Summary_mainBox > div> p{
+        font-size: 15px;
+    }
+}
+
+@media only screen and (max-width: 400px){
+    .Summary_mainBox > div> p{
+        font-size: 13px;
+    }
 }

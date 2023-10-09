@@ -1,25 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
-.Login_div{
+.Signup_div{
     margin-top: 50px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-.Login_backbox{
+.Signup_backbox{
     text-align: center;
     padding: 40px;
-    width: 60%;
     min-width: 300px;
     max-width: 400px;
     margin-bottom: 20px;
+    width: 60%;
     border-radius: 15px;
     background-color: rgba(255, 255, 255, 0.715);
     -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(20px);
 }
 
-.Login_text{
+.Signup_text{
     background: #AB3DCC;
     background: -webkit-radial-gradient(circle farthest-corner at center center, #AB3DCC 11%, #1298FF 40%, #A50BD4 96%);
     background: -moz-radial-gradient(circle farthest-corner at center center, #AB3DCC 11%, #1298FF 40%, #A50BD4 96%);
@@ -30,7 +30,7 @@
     font-family: 'Dancing Script';
 }
 
-.Login_components{
+.Signup_components{
     display: flex;
     flex-direction: column;
     align-items: left;
@@ -39,8 +39,8 @@
 }
 
 .title{
-    margin-top: 15px;
     margin-left: 10px;
+    margin-top: 15px;
 }
 
 .title_input{
@@ -56,8 +56,8 @@
 }
 
 .link{
-    margin-left: 10px;
     margin-top: 15px;
+    margin-left: 10px;
 }
 
 .link > a{
@@ -65,8 +65,8 @@
     text-decoration: none;
     color: rgba(21, 183, 227, 0.975);
 }
-         
-.Log_in_button{
+
+.Sign_up_button{
     background-image: linear-gradient(to right, #36D1DC 0%, #5B86E5  51%, #36D1DC  100%);
     margin-top: 30px;
     padding: 15px 45px;
@@ -78,24 +78,14 @@
     border-radius: 20px;
   }
 
-  .Log_in_button:hover {
+  .Sign_up_button:hover {
     background-position: right center;
     color: #fff;
     text-decoration: none;
   }
- 
-  .error_pass_In{
+
+  .error_pass{
     color: rgba(255, 0, 0, 0.76);
     margin-top: 15px;
     margin-left: 10px;
   }
- 
-/*
-.Log_in_button{
-    border-radius: 20px;
-    padding: 15px;
-    margin-top: 20px;
-    background-color: #1298FF;
-    color: wheat;
-}
-*/

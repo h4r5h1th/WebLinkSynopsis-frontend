@@ -1,8 +1,170 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap');
+
 .TopNav{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     padding: 15px 20px;
+}
+
+.NavTitle{
+    font-family: 'Dancing Script';
+}
+
+.Right_Nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.Log_Out{
+    cursor: pointer;
+    background-image: linear-gradient(to right, #36D1DC 0%, #5B86E5  51%, #36D1DC  100%);
+    padding: 10px 20px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #016f8e;
+    border-radius: 20px;
+  }
+
+.Log_Out:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
+
+  .Menu_Button{
+    display: none;
+    cursor: pointer;
+  }
+
+  .Top_Nav_Expand{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
     background-color:rgba(0, 145, 255, 0.2);
     backdrop-filter: blur(20px);
+  }
+
+  .Responsive_Menu{
+    display: none;
+  }
+
+  .Log_Out_resMenu{
+    cursor: pointer;
+    background-image: linear-gradient(to right, #3c3c3c 0%, #191919  51%, #3c3c3c  100%);
+    padding: 10px 30px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 20px #016f8e;
+    border-radius: 10px;
+    width: 100%;
+  }
+
+.Log_Out_resMenu:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
 }
+
+.Sign_In{
+  cursor: pointer;
+  background-image: linear-gradient(to right, #5B86E5 0%, #36D1DC  51%, #5B86E5  100%);
+  padding: 10px 20px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #016f8e;
+  border-radius: 20px;
+}
+
+.Sign_In:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+.Sign_Up{
+  cursor: pointer;
+  background-image: linear-gradient(to right, #5B86E5 0%, #36D1DC  51%, #5B86E5  100%);
+  padding: 10px 20px;
+  text-align: center;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;            
+  box-shadow: 0 0 20px #016f8e;
+  border-radius: 20px;
+}
+
+.Sign_Up:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+
+
+  @media only screen and (max-width: 600px){
+    .Log_Out{
+        display: none;
+    }
+    .NavAbout{
+        display: none;
+    }
+
+    .Sign_In{
+      display: none;
+    }
+
+    .Sign_Up{
+      display: none;
+    }
+
+    .Menu_Button{
+        display: block;
+        background: #05edfe4c;
+        background-image: linear-gradient(to right, #2badb7c1 0%, #5b87e5c1  51%, #2badb7c1  100%);
+        padding: 5px 15px;
+        text-align: center;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: white;            
+        box-shadow: 0 0 20px #016f8e7c;
+        border-radius: 20px;
+      }
+    
+    .Menu_Button:hover {
+        background-position: right center;
+        color: #fff;
+        text-decoration: none;
+      }
+
+      .Responsive_Menu{
+        display: block;
+        padding: 10px;
+        padding-bottom: 20px;
+        padding-top: 0px;
+        width: 100%;
+      }
+
+      .NavAbout_resMenu{
+        cursor: pointer;
+        color: white;
+        margin: 20px 0px;
+        padding: 5px 0px ;
+        background: #05edfe9a;
+        background-image: linear-gradient(to right, #2badb7c1 0%, #5b87e5c1  51%, #2badb7c1  100%);
+        transition: 0.5s;
+        border-radius: 5px;
+      }
+  }
