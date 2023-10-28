@@ -5,7 +5,7 @@ const SearchBar = ({urllink, setUrllink, text, Settext, iSloading, SetIsloading}
     async function Clicked (){
       try{
         SetIsloading(true);
-        var temp = await axios.post('http://localhost:3001/summary',{urllink: urllink})   
+        var temp = await axios.post('http://127.0.0.1:3001/summary',{urllink: urllink})   
         Settext(temp)
         SetIsloading(false);
       }

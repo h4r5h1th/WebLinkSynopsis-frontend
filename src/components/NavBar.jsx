@@ -36,6 +36,11 @@ function NavBar({user, setUser}) {
     navigate('/about');
   }
 
+  function Storage_Res(){
+    Menu_Func();
+    navigate('/Saved');
+  }
+
   function LogIn_redir(){
     navigate('/')
   }
@@ -58,6 +63,11 @@ function NavBar({user, setUser}) {
                 DashBoard 
                 </Link>
               </p>:<></>}
+              {user?<p className='NavAbout'>
+                <Link style={{ textDecoration: 'none', color:'white', fontWeight:'550', fontSize:'15px'}} to="/Saved">
+                Storage 
+                </Link>
+              </p>:<></>}
               <p className='NavAbout'>
                 <Link style={{ textDecoration: 'none', color:'white', fontWeight:'550', fontSize:'15px'}} to="/about">
                 About
@@ -77,6 +87,10 @@ function NavBar({user, setUser}) {
       {user?
       <p className='NavAbout_resMenu' onClick={DashBoard_Res}>
           DashBoard
+      </p>:<></>}
+      {user?
+      <p className='NavAbout_resMenu' onClick={Storage_Res}>
+          Storage
       </p>:<></>}
       <p className='NavAbout_resMenu' onClick={About_Res}>
           About

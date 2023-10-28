@@ -1,10 +1,16 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Summary.css'
 import CircularProgress from '@mui/material/CircularProgress';
+import SaveIcon from '@mui/icons-material/Save';
+import axios from 'axios'
 
-
-const Summary = ({text, iSloading}) => {
-  console.log(iSloading);
+const Summary = ({user, urllink,text, iSloading}) => {
+  const [save_load, Setsaveload] = useState(false);
+  async function SaveData(){
+    Setsaveload(true);
+    await axios.post('http://127.0.0.1:3001/api/save_data', {user: user, urllink: urllink, data_text: text})
+    Setsaveload(false);
+  }
   return (
     <div className='Summary_mainBox'>
         {iSloading?(<CircularProgress style={{marginTop:'auto', marginBottom: '50px', color: 'black', cursor: 'wait'}} />)
@@ -19,6 +25,7 @@ const Summary = ({text, iSloading}) => {
             <div>
               <h3>Summary:</h3>
               <p>{text.data}</p>
+              <button className='Save_Button' onClick={SaveData} disabled={save_load}>{save_load?<CircularProgress style={{color: 'white', height: '25px', width: '25px'}}/>:<SaveIcon/>}</button>
             </div>
         )}
     </div>

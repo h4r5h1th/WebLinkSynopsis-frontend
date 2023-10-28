@@ -6,6 +6,7 @@ import { Routes, Route } from "react-router-dom";
 import DashBoard from './components/DashBoard';
 import Signup from './components/Signup';
 import NavBar from './components/NavBar';
+import Saved from './components/Saved';
 
 function App() {
   const [urllink, setUrllink] = useState('');
@@ -18,7 +19,10 @@ function App() {
       <Routes>
       <Route path='/Signup' element={ <Signup user={user} setUser={setUser} />}/>
       {user?
-          <Route path='/dashboard' element={<DashBoard urllink={urllink} setUrllink= {setUrllink} text = {text} Settext = {Settext} iSloading={iSloading} SetIsloading={SetIsloading} />}/>
+          <>
+          <Route path='/dashboard' element={<DashBoard user={user} urllink={urllink} setUrllink= {setUrllink} text = {text} Settext = {Settext} iSloading={iSloading} SetIsloading={SetIsloading} />}/>
+          <Route path = '/Saved' element = {<Saved user={user}/>}/>
+          </>
           :<></>
       }
       <Route path='/about' element=<About />/>

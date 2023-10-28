@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import './Signup.css'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import axios from 'axios';
 import CircularProgress from '@mui/material/CircularProgress';
 
@@ -13,6 +13,7 @@ const Signup = () => {
     const [dis, setDis] = useState(false);
     const [IsLoading, SetIsLoading] = useState(false);
     const [resmes, Setresmes] = useState('');
+    const navigate = useNavigate();
 
     function UserSet(e){
         SetUser(e.target.value);
@@ -50,8 +51,11 @@ const Signup = () => {
         e.preventDefault();
         //continue from here
         SetIsLoading(true);
-        const response = await axios.post('http://localhost:3001/api/signup', {user:user, email:email, password:password});
+        const response = await axios.post('http://127.0.0.1:3001/api/signup', {user:user, email:email, password:password});
         console.log(response);
+        if(response.data==='Success'){
+            navigate('/');
+        }
         Setresmes(response.data);
         SetIsLoading(false);
     }

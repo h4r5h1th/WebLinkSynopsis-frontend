@@ -22,8 +22,7 @@ const Login = ({user, setUser}) => {
   async function LoginIn_User(e){
     e.preventDefault();
     SetIsLoading(true);
-    const response = await axios.post('http://localhost:3001/api/login', {'email': Email,'password': password});
-    console.log(response);
+    const response = await axios.post('http://127.0.0.1:3001/api/login', {'email': Email,'password': password});
     if(response.data.data==='Correct'){
       setUser(response.data.userName);
       navigate('/dashboard');

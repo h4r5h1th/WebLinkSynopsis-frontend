@@ -1,0 +1,44 @@
+.EachSave_div{
+    width: 280px;
+    background-color: rgba(255, 255, 255, 0.527);
+    margin-top: 10px;
+    border-radius: 20px;
+    padding: 10px;
+    backdrop-filter: blur(20px);
+    color: rgb(0, 0, 0);
+}
+
+.Link_Head{
+    padding: 10px;
+    padding-left: 0;
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.Summary_head{
+    padding: 10px;
+    padding-left: 0;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.Saved_Top_component{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.Saved_Top_component > button{
+    background-color: rgba(150, 0, 0, 0.708);
+    color: white;
+    padding: 5px;
+    border-radius: 10px;
+    backdrop-filter: blur(20px);
+    cursor: pointer;
+    transition: 0.5s ease-in;
+    scale: 0.8;
+}
+
+.Saved_Top_component > button:hover{
+    scale: 1;
+}
